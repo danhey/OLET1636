@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Transiting Exoplanet Tutorial</title>
+    <meta name="description" content="">
+    <meta name="author" content="Daniel Hey">
+
+    <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/skeleton.css">
+    
+    <!-- Scripts–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	  <script type="text/javascript" src="js/plotly-latest.min.js"></script>
+    
+    <!-- Favicon  -->
+    <link rel="icon" type="image/jpg" href="css/icon.jpg">
+    
+</head>
+
+<body>
+  <!-- Primary Page Layout–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<div class="row">
+<div class="three columns">
+<div id="left_content">
+<div class="row columns">
+	<div class="eight columns"><h5>Transiting Exoplanet Tutorial</h5></div>
+    <div class="two columns">
+	  <div id="open-modalHelp" class="modal-window">
+			<div>
+			<a href="#modal-close" title="Close" class="modal-close">Close</a>   
+			</div>
+    </div>
+	</div>
+    
+	<div class="two columns">
+	  <a class="btn" href="#open-modal">About</a>
+	  <div id="open-modal" class="modal-window">
+			<div>
+			<a href="#modal-close" title="Close" class="modal-close">Close</a>
+                <h1>About</h1> 
+			<p>The Transiting Exoplanet Tutorial page was
+				written by Daniel Hey (danielhey at outlook dot com) for the OLET1636 - Astronomy: From Earth to Exoplanets course </p>			
+			<p>The Transiting Exoplanet Tutorial makes use of the excellent <a href="https://github.com/dhg/Skeleton">skeleton CSS framework</a>, and the <a href="https://plot.ly/javascript/">plotly charting library.</a></p>     
+      <img class="rotate" src="css/icon.jpg" height="42" width="42">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Send in the tabs -->
+
+<div class="row columns">
+  <p>
+  You should identify the first 23 ’dips’ or transits in the light curve and measure their depths and
+  duration (i.e.  what length of time does the dip last for - from start to finish).  Keep in mind that
+  the depth is how much light is
+  blocked out
+  by the planet, not how bright the star appears as the
+  planet passes in front.  
+  </p>
+  <p>
+    Both space based (<span style="color: #ff7f0e">orange</span> ) and ground based (<span style="color: #1f77b4">blue</span> ) data are shown on the graph. If you want to examine only one at a time, click the 
+    corresponding name in the legend (top left). Use the magnifying glass (top right) to zoom in on the transits, and the box tool
+    to select the transit event. To deselect points, double click anywhere on the plot with the box select tool. <b>If you want to reset the plot, press the home button top right.</b>
+    
+    </p>
+  <p>
+  Record this data in the worksheet. A table has been provided below, but be warned - it will not save your data if you refresh the page.  
+  Think about how many significant figures
+  you will need, and how many you can accurately measure from the light curve
+  </p>
+  <p>
+  Identify transits that have similar durations and depths – these are likely to be caused by the same
+  planet!  You should be able to find at least 2 transiting planets and perhaps even a third (these
+  may not use all of the transits you have located as there may be more planets).
+  </p>
+  <div id="dialog-window">
+    <div id="scrollable-content">
+    <table>
+      <tr>
+        <th>Transit #</th>
+        <th>Time (d)</th>
+        <th>Duration (d)</th>
+        <th>Depth (fractional)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+        <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
+          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="nine columns">
+	<div id="content"></div>
+</div>
+
+</div>
+
+<!-- Scripts! ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+<script>
+
+//Called when the program first opens
+window.onload = function() {
+  
+	//Instantiate the chart and bind it to content html
+  var graphDiv = document.getElementById('content');	
+
+  Plotly.d3.csv("data/ground.csv", function(err, ground){
+    Plotly.d3.csv("data/space.csv", function(err, space){
+    function unpack(ground, key) {
+      return ground.map(function(ground) { return ground[key]; });
+    }
+    function unpack2(space, key) {
+        return space.map(function(space) { return space[key]; });
+    }
+
+  var trace1 = {
+    type: "scatter",
+    mode: "markers",
+    name: 'Ground-based',
+    x: unpack(ground, 'time_ground'),
+    y: unpack(ground, 'flux_ground'),
+    marker: {
+    //color: 'rgb(217,95,2)',
+    opacity: 0.9,
+    size: 6,
+  }
+  }
+
+  var trace2 = {
+    type: "scattergl",
+    mode: "markers",
+    name: 'Space-based',
+    x: unpack2(space, 'time_space'),
+    y: unpack2(space, 'flux_space'),
+    marker: {
+    //color: 'rgb(27,158,119)',
+    opacity: 0.9,
+    size: 6,
+  }
+  }
+
+  var data = [
+    trace1,
+    trace2
+  ];
+      
+  var layout = {
+    hovermode: "closest",
+    yaxis: {title: 'Flux'},
+    xaxis: {title: 'Time (days)'},
+    margin: {
+      t: 50, //top margin
+      l: 50, //left margin
+      r: 0, //right margin
+      b: 50 //bottom margin
+          },
+      legend: {
+      x: 0,
+      y: 1,
+      traceorder: 'normal',
+      font: {
+        family: 'sans-serif',
+        size: 15,
+        color: '#000'
+      },
+      bgcolor: '#E2E2E2',
+      bordercolor: '#FFFFFF',
+      borderwidth: 3
+    },
+          };
+
+  Plotly.newPlot(graphDiv, data, layout, {showSendToCloud: false}, {responsive: true},    
+  );
+
+  });
+});
+
+}
+
+</script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
