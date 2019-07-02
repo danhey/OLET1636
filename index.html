@@ -10,11 +10,18 @@
     <meta name="author" content="Daniel Hey">
 
     <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/new.css">
     
     <!-- Scripts–––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script type="text/javascript" src="js/utils.js"></script>
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script
+			  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+			  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+			  crossorigin="anonymous"></script>
 	  <script type="text/javascript" src="js/plotly-latest.min.js"></script>
     
     <!-- Favicon  -->
@@ -25,231 +32,19 @@
 <body>
   <!-- Primary Page Layout–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<div class="three columns">
-<div id="left_content">
-<div class="row columns">
-	<div class="eight columns"><h5>Transiting Exoplanet Tutorial</h5></div>
-    <div class="two columns">
-	  <div id="open-modalHelp" class="modal-window">
-			<div>
-			<a href="#modal-close" title="Close" class="modal-close">Close</a>   
-			</div>
-    </div>
-	</div>
-    
-	<div class="two columns">
-	  <a class="btn" href="#open-modal">About</a>
-	  <div id="open-modal" class="modal-window">
-			<div>
-			<a href="#modal-close" title="Close" class="modal-close">Close</a>
-                <h1>About</h1> 
-			<p>The Transiting Exoplanet Tutorial page was
-				written by Daniel Hey (danielhey at outlook dot com) for the OLET1636 - Astronomy: From Earth to Exoplanets course </p>			
-			<p>The Transiting Exoplanet Tutorial makes use of the excellent <a href="https://github.com/dhg/Skeleton">skeleton CSS framework</a>, and the <a href="https://plot.ly/javascript/">plotly charting library.</a></p>     
-      <img class="rotate" src="css/icon.jpg" height="42" width="42">
-			</div>
-		</div>
-	</div>
-</div>
 
-<!-- Send in the tabs -->
-
-<div class="row columns">
-  <p>
-  You should identify the first 23 ’dips’ or transits in the light curve and measure their depths and
-  duration (i.e.  what length of time does the dip last for - from start to finish).  Keep in mind that
-  the depth is how much light is
-  blocked out
-  by the planet, not how bright the star appears as the
-  planet passes in front.  
-  </p>
-  <p>
-    Both space based (<span style="color: #ff7f0e">orange</span> ) and ground based (<span style="color: #1f77b4">blue</span> ) data are shown on the graph. If you want to examine only one at a time, click the 
-    corresponding name in the legend (top left). Use the magnifying glass (top right) to zoom in on the transits. <b>If you want to reset the plot, press the home button top right.</b>
-    
-    </p>
-  <p>
-  Record this data in the worksheet. A table has been provided below, but be warned - it will not save your data if you refresh the page.  
-  Think about how many significant figures
-  you will need, and how many you can accurately measure from the light curve
-  </p>
-  <p>
-  Identify transits that have similar durations and depths – these are likely to be caused by the same
-  planet!  You should be able to find at least 2 transiting planets and perhaps even a third (these
-  may not use all of the transits you have located as there may be more planets).
-  </p>
-  <div id="dialog-window">
-    <div id="scrollable-content">
-    <table>
-      <tr>
-        <th>Transit #</th>
-        <th>Time (d)</th>
-        <th>Duration (d)</th>
-        <th>Depth (fractional)</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-        <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>19</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>20</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>21</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>22</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>23</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>24</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-      <tr>
-        <td>25</td>
-        <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width"  TYPE="NUMBER" NAME="" SIZE="5"></td>
-          <td><INPUT class="u-full-width" TYPE="NUMBER" NAME="" SIZE="5"></td>
-      </tr>
-    </table>
+  <div id="content"></div>
+  <div>
+    <ul class="ruler" id="mydiv" data-items="10"></ul>
   </div>
-</div>
-
-</div>
-</div>
-</div>
 
 
-<div class="nine columns">
-	<div id="content"></div>
+<div>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="15" value="1" class="slider" id="spacing" step=0.25>
+    </div>
 </div>
-
+</body>
 
 <!-- Scripts! ––––––––––––––––––––––––––––––––––––––––––––––––––-->
 <script>
@@ -325,14 +120,84 @@ window.onload = function() {
     },
           };
 
-
 	var config2 = {
-   modeBarButtonsToRemove: ['toImage', 'sendDataToCloud', 'hoverCompareCartesian','toggleSpikelines','autoScale2d','select2d','lasso2d'],
+   modeBarButtonsToRemove: ['toImage', 'sendDataToCloud', 
+          'hoverCompareCartesian','toggleSpikelines',
+          'autoScale2d','select2d','lasso2d'],
    displaylogo: false
 };
 
   Plotly.newPlot(graphDiv, data, layout, config2
   );
+
+  $(function() {
+    // Build "dynamic" rulers by adding items
+    $(".ruler[data-items]").each(function() {
+        var ruler = $(this).empty(),
+            len = Number(ruler.attr("data-items")) || 0,
+            item = $(document.createElement("li")),
+            i;
+        for (i = 0; i < len; i++) {
+            ruler.append(item.clone().text(i + 1));
+        }
+    });
+    // Change the spacing programatically
+    function changeRulerSpacing(spacing) {
+      spacing = spacing.concat("em")
+        $(".ruler").
+          css("padding-right", spacing).
+          find("li").
+            css("padding-left", spacing);
+    }
+    $("#spacing").change(function() {
+        changeRulerSpacing($(this).val());
+    });
+  });
+
+  $( "#mydiv" ).resizable({ ghost: true });
+// Make the DIV element draggable:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
 
   });
 });
