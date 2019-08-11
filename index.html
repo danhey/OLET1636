@@ -34,42 +34,51 @@
 
 
   <div id="content"></div>
-  <div>
-    <ul class="ruler" id="mydiv" data-items="10"></ul>
-  </div>
+
+</body>
+
+<div>
+  <ul class="ruler" id="mydiv" data-items="10"></ul>
+</div>
 
 
 <div>
-    <div class="slidecontainer">
-      <input type="range" min="1" max="15" value="1" class="slider" id="spacing" step=0.25>
-    </div>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="15" value="1" class="slider" id="spacing" step=0.25>
+  </div>
 </div>
-</body>
 
 <!-- Scripts! ––––––––––––––––––––––––––––––––––––––––––––––––––-->
 <script>
 
 //Called when the program first opens
 window.onload = function() {
+
+
+
+
+
+
+
+
+
+
+
   
 	//Instantiate the chart and bind it to content html
   var graphDiv = document.getElementById('content');	
 
-  Plotly.d3.csv("data/ground.csv", function(err, ground){
-    Plotly.d3.csv("data/space.csv", function(err, space){
+  Plotly.d3.csv("data/KIC9471974.csv", function(err, ground){
     function unpack(ground, key) {
       return ground.map(function(ground) { return ground[key]; });
     }
-    function unpack2(space, key) {
-        return space.map(function(space) { return space[key]; });
-    }
 
   var trace1 = {
-    type: "scatter",
+    type: "scattergl",
     mode: "markers",
     name: 'Ground-based',
-    x: unpack(ground, 'time_ground'),
-    y: unpack(ground, 'flux_ground'),
+    x: unpack(ground, 'time'),
+    y: unpack(ground, 'flux'),
     marker: {
     //color: 'rgb(217,95,2)',
     opacity: 0.9,
@@ -77,22 +86,8 @@ window.onload = function() {
   }
   }
 
-  var trace2 = {
-    type: "scattergl",
-    mode: "markers",
-    name: 'Space-based',
-    x: unpack2(space, 'time_space'),
-    y: unpack2(space, 'flux_space'),
-    marker: {
-    //color: 'rgb(27,158,119)',
-    opacity: 0.9,
-    size: 6,
-  }
-  }
-
   var data = [
     trace1,
-    trace2
   ];
       
   var layout = {
@@ -101,8 +96,8 @@ window.onload = function() {
     xaxis: {title: 'Time (days)'},
     margin: {
       t: 50, //top margin
-      l: 50, //left margin
-      r: 0, //right margin
+      l: 100, //left margin
+      r: 50, //right margin
       b: 50 //bottom margin
           },
       legend: {
@@ -111,7 +106,7 @@ window.onload = function() {
       traceorder: 'normal',
       font: {
         family: 'sans-serif',
-        size: 15,
+        size: 30,
         color: '#000'
       },
       bgcolor: '#E2E2E2',
@@ -127,8 +122,9 @@ window.onload = function() {
    displaylogo: false
 };
 
-  Plotly.newPlot(graphDiv, data, layout, config2
-  );
+  Plotly.newPlot(graphDiv, data, layout, config2);
+
+
 
   $(function() {
     // Build "dynamic" rulers by adding items
@@ -199,7 +195,6 @@ function dragElement(elmnt) {
   }
 }
 
-  });
 });
 
 }
